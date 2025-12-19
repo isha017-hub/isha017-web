@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electric Vehicles</title>
+
+<style>
+:root{
+    --main:#00c4b3;
+    --dark:#023535;
+    --light:#e6fffb;
+    --text:#012424;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:0;
+    background:var(--light);
+    color:var(--text);
+}
+nav{
+    width:100%;
+    background:var(--dark);
+    padding:15px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+}
+
+nav h2{
+    color:white;
+    margin:0;
+    letter-spacing:2px;
+}
+
+nav ul{
+    list-style:none;
+    margin:0;
+    display:flex;
+    gap:25px;
+}
+
+nav ul li a{
+    color:white;
+    font-size:18px;
+    text-decoration:none;
+    padding:8px 15px;
+    border-radius:8px;
+    transition:0.4s ease;
+    font-weight:bold;
+}
+
+nav ul li a:hover{
+    background:var(--main);
+    color:black;
+}
+section{
+    padding:80px 10%;
+    display:none;
+}
+
+.active{
+    display:block;
+}
+h1{
+    font-size:40px;
+    margin-bottom:15px;
+    color:var(--dark);
+}
+
+p{
+    font-size:19px;
+    line-height:1.6;
+}
+.model-box{
+    background:white;
+    padding:15px;
+    margin:12px 0;
+    border-left:6px solid var(--main);
+    border-radius:8px;
+    transition:.3s;
+}
+
+.model-box:hover{
+    background:#cafff8;
+}
+
+</style>
+
+<script>
+function showSection(sectionId){
+    document.querySelectorAll("section").forEach(sec=>{
+        sec.classList.remove("active");
+    });
+
+    document.getElementById(sectionId).classList.add("active");
+}
+</script>
+
+</head>
+
+<body>
+<nav>
+    <h2>EV World ⚡</h2>
+    <ul>
+        <li><a href="#" onclick="showSection('home')">Home</a></li>
+        <li><a href="#" onclick="showSection('tata')">Tata EV</a></li>
+        <li><a href="#" onclick="showSection('tesla')">Tesla EV</a></li>
+        <li><a href="#" onclick="showSection('mahindra')">Mahindra EV</a></li>
+    </ul>
+</nav>
+<section id="home" class="active">
+    <h1>Welcome To Electric Vehicle Website ⚡</h1>
+    <p>
+        Electric vehicles use electric motors powered by rechargeable batteries.
+        EVs are environment friendly and the future of transportation.
+    </p>
+   <center> <img src="https://carindia.in/wp-content/uploads/2024/07/EV-Collage-WEB-640x430.jpg" alt=""></center>
+</section>
+<section id="tata">
+    <h1>Tata Electric Vehicles</h1>
+
+    <div class="model-box">
+        <h2>Tata Nexon EV</h2>
+        <img src="https://catalog-management.s3.ap-south-1.amazonaws.com/htmobile1/tata_nexonevmax/images/exterior_tata-nexon-ev-max-dark_front-view_600x400.jpeg" height="300px" alt="">
+        <p>Range: 465 km | Price: ₹14.49 Lakh</p>
+    </div>
+
+    <div class="model-box">
+        <h2>Tata Punch EV</h2>
+        <img src="https://c.ndtvimg.com/2021-10/b0g40fq8_tata-punch_650x400_05_October_21.jpg" height="300px" alt="">
+        <p>Range: 421 km | Price: ₹10.50 Lakh</p>
+    </div>
+
+</section>
+<section id="tesla">
+    <h1>Tesla Electric Vehicles</h1>
+
+    <div class="model-box">
+        <h2>Tesla Model S</h2>
+        <img src="https://stimg.cardekho.com/images/carexteriorimages/930x620/Tesla/Model-S/5252/1752499273852/front-left-side-47.jpg" height="400px">
+        <p>Range: 628 km | Speed: 322 km/h</p>
+    </div>
+
+    <div class="model-box">
+        <h2>Tesla Cybertruck</h2>
+        <img src="https://hips.hearstapps.com/hmg-prod/images/2025-tesla-cybertruck-3-672e75cce7814.jpg?crop=0.531xw:0.398xh;0.137xw,0.462xh&resize=1200:*" height="300px" alt="">
+        <p>Range: 547 km | AWD Electric Truck</p>
+    </div>
+
+</section>
+<section id="mahindra">
+    <h1>Mahindra Electric Vehicles</h1>
+
+    <div class="model-box">
+        <h2>Mahindra XUV400 EV</h2>
+        <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/XEV-9e/9262/1755776058045/front-left-side-47.jpg" height="350px">
+        <p>Range: 456 km | Price: ₹15.99 Lakh</p>
+    </div>
+</section>
+
+</body>
+</html>
